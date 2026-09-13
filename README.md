@@ -18,3 +18,13 @@ View your app in AI Studio: https://ai.studio/apps/ac6b6427-764a-4952-9f67-94e3c
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Cloudflare Pages
+
+- Production branch: `main`
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: repository root
+
+Use npm with the committed `package-lock.json` (`npm ci` locally). Do not add a
+Bun lockfile: Pages' default Bun 1.2.15 cannot read the exported version 2 lockfile.
