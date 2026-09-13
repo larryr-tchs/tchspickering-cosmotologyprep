@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "classes": {
+      "title": "Classes",
+      "description": "Classroom cohorts created by cosmetology instructors",
+      "type": "object",
+      "properties": {
+        "classCode": { "type": "string" },
+        "className": { "type": "string" },
+        "instructorName": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["classCode", "className"]
+    },
+    "examSubmissions": {
+      "title": "Exam Submissions",
+      "description": "Student exam score submissions with domain breakdown",
+      "type": "object",
+      "properties": {
+        "classCode": { "type": "string" },
+        "studentName": { "type": "string" },
+        "quizMode": { "type": "string" },
+        "score": { "type": "number" },
+        "totalQuestions": { "type": "number" },
+        "percentage": { "type": "number" },
+        "passed": { "type": "boolean" },
+        "timeSpentSeconds": { "type": "number" },
+        "subjectBreakdown": { "type": "object" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["classCode", "studentName", "percentage"]
+    }
+  },
+  "firestore": {
+    "/classes/{classCode}": {
+      "entity": "classes",
+      "description": "Classroom cohort records"
+    },
+    "/examSubmissions/{submissionId}": {
+      "entity": "examSubmissions",
+      "description": "Individual student test score entries"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Cosmetology State Board Exam Prep",
+  "description": "Comprehensive cosmetology written state board exam preparation platform with realistic timed practice quizzes, subject-by-subject study guides, flashcards, and student progress tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
